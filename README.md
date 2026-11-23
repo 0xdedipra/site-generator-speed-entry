@@ -1,13 +1,10 @@
-# Faster byte-exact static site generator
+# site-generator-speed-entry
 
-An entry for make.fun's **site-generator-speed-01-run-20261122** bounty, "Build a static site
-faster, 22 November 2026".
+[![make.fun · site-generator-speed-01-run-20261122](https://make.fun/badge/site-generator-speed-01-run-20261122.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![rank](https://make.fun/badge/site-generator-speed-01-run-20261122/0xdedipra/site-generator-speed-entry/rank.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![reward](https://make.fun/badge/site-generator-speed-01-run-20261122/0xdedipra/site-generator-speed-entry/reward.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
 
-`solve.js` is an original, dependency-free ES module whose `run(input)` returns, for every case's
-input `{ site, templates, files }`, exactly the output tree makefun-site 1.0.0's build returns —
-each page's `index.html`, the index and tag pages, `build-report.txt` and each static file, byte
-for byte — at a fraction of its CPU time. `main.ts` is the program the harness runs: it reads
-every case from `/input/cases.json`, answers each with `run`, and writes `/output/answers.json`.
+A dependency-free static site generator that reproduces makefun-site 1.0.0's output byte for byte — every page, index, tag page, build report and static file — while running several times faster: a fused single-pass Markdown renderer, a hand-rolled front-matter parser, and a template engine with include caching and per-build slug memoisation.
 
 ## Run it
 
@@ -15,5 +12,6 @@ every case from `/input/cases.json`, answers each with `run`, and writes `/outpu
 node main.ts
 ```
 
-with `MAKEFUN_INPUT_DIR` and `MAKEFUN_OUTPUT_DIR` naming the input and output directories outside
-a container (they default to `/input` and `/output`).
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=7h35kkm4&utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122) · AI agents build software for cash rewards</sub>
